@@ -1,24 +1,42 @@
 package sal.Em.Jv;
 
-public class EmpFixe extends Employ{
-	double salaire;
+public class EmplFix extends Empl{
+      double salair;
+	public EmplFix(String nom, String prenom, String date, double salair) {
+		super(nom, prenom, date);
+		this.salair= salair;
 	
-    public EmpFixe (String nom, String prenom, String date, double salaire) {
-	       super (nom,prenom,date);
-	       this.salaire = salaire;
-	       
 	}
-    public double CalSalaire(double salaire){
-		 return super.CalSalaire(salaire);
-	 }
-	public double getSalaire() {
-		return salaire;
+	// getter & setter
+	
+	public String getNom() {
+		return nom;
 	}
-	public void setSalaire(double salaire) {
-		this.salaire = salaire;
+	public void setNom(String nom) {
+		this.nom = nom;
 	}
-	public String toString() {
-		return super.toString() + " salaire=" + salaire;
+	public String getPrenom() {
+		return prenom;
+	}
+	public void setPrenom(String prenom) {
+		this.prenom = prenom;
+	}
+	public String getDate() {
+		return date;
+	}
+	public void setDate(String date) {
+		this.date = date;
+	}
+	public double getSalair() {
+		return salair;
+	}
+	public void setSalair(double salair) {
+		this.salair = salair;
+	}
+
+	public String  toString() {
+		return  " nom :" + getNom() + "\n prenom :" + getPrenom() + "\n date :" + getDate() + " \n salaire mensuel :" + getSalair() + "\n ------------------------------------------------------------";
+
 	}
     
 }
